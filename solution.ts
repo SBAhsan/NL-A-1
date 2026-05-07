@@ -4,7 +4,7 @@ const filterEvenNumbers = (...nums: number[]) => {
 }
 
 const filtered = filterEvenNumbers(1, 2, 3, 4, 5, 6);
-console.log(filtered);
+// console.log(filtered);
 
 
 //solution 2:
@@ -13,4 +13,20 @@ const reverseString = (word: string) => {
 }
 
 const reversed = reverseString('typescript');
-console.log(reversed);
+// console.log(reversed);
+
+
+//solution 3:
+type StringOrNumber = string | number
+
+const checkType = (input: StringOrNumber) => {
+    if(typeof input === 'string'){
+        console.log('String');
+    }
+    else if(typeof input === 'number'){
+        console.log('Number');
+    }
+}
+
+checkType('Hello');
+checkType(42);
