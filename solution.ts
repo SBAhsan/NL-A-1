@@ -28,5 +28,26 @@ const checkType = (input: StringOrNumber) => {
     }
 }
 
-checkType('Hello');
-checkType(42);
+// checkType('Hello');
+// checkType(42);
+
+
+//solution 4:
+interface Book {
+    title: string;
+    author: string;
+    publishedYear: number;
+}
+
+const myBook = {
+    title: 'TypeScript Guide',
+    author: 'Jane Doe',
+    publishedYear: 2024
+}
+
+const toggleReadStatus = (book: Book) => {
+    return {...book, isRead: true};
+}
+
+const readBook = toggleReadStatus(myBook);
+console.log(readBook);
