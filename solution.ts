@@ -4,8 +4,13 @@ const filterEvenNumbers = (...nums: number[]) => {
 }
 
 const filtered = filterEvenNumbers(1, 2, 3, 4, 5, 6);
-
 console.log(filtered);
 
 
+//solution 2:
+const reverseString = (word: string) => {
+    return word.split('').reverse().join('');
+}
 
+const reversed = reverseString('typescript');
+console.log(reversed);
