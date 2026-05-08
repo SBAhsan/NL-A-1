@@ -4,7 +4,7 @@ const filterEvenNumbers = (...nums: number[]) => {
 }
 
 const filtered = filterEvenNumbers(1, 2, 3, 4, 5, 6);
-// console.log(filtered);
+console.log(filtered);
 
 
 //solution 2:
@@ -13,7 +13,7 @@ const reverseString = (word: string) => {
 }
 
 const reversed = reverseString('typescript');
-// console.log(reversed);
+console.log(reversed);
 
 
 //solution 3:
@@ -28,8 +28,8 @@ const checkType = (input: StringOrNumber) => {
     }
 }
 
-// checkType('Hello');
-// checkType(42);
+checkType('Hello');
+checkType(42);
 
 
 
@@ -40,7 +40,7 @@ const getProperty = <T, K extends keyof T>(obj:T, key: K) : T[K] => {
 
 const user = { id: 1, name: "John Doe", age: 21 };
 const value = getProperty(user, 'name');
-// console.log(value);
+console.log(value);
 
 
 
@@ -62,12 +62,12 @@ const toggleReadStatus = (book: Book) => {
 }
 
 const readBook = toggleReadStatus(myBook);
-// console.log(readBook);
+console.log(readBook);
 
 
 
 
-// solution 6:
+//solution 6:
 class Person{
     name: string;
     age: number;
@@ -95,3 +95,16 @@ class Student extends Person{
 
 const student = new Student("Alice", 20, "A");
 console.log(student.getDetails());
+
+
+
+
+//solution 7:
+const getIntersection = (arr1: number[], arr2: number[]) => {
+    const newArr: number[] = arr1.filter(i => arr2.includes(i));
+
+    return newArr;
+}
+
+const intersectedArray = getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]);
+console.log(intersectedArray);
