@@ -32,7 +32,17 @@ const checkType = (input: StringOrNumber) => {
 // checkType(42);
 
 
+
 //solution 4:
+const getProperty = <T, K extends keyof T>(obj:T, key: K) : T[K] => {
+    return obj[key];
+}
+
+const user = { id: 1, name: "John Doe", age: 21 };
+const value = getProperty(user, 'name');
+console.log(value);
+
+//solution 5:
 interface Book {
     title: string;
     author: string;
@@ -50,4 +60,5 @@ const toggleReadStatus = (book: Book) => {
 }
 
 const readBook = toggleReadStatus(myBook);
-console.log(readBook);
+// console.log(readBook);
+
