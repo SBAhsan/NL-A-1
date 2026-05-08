@@ -40,7 +40,9 @@ const getProperty = <T, K extends keyof T>(obj:T, key: K) : T[K] => {
 
 const user = { id: 1, name: "John Doe", age: 21 };
 const value = getProperty(user, 'name');
-console.log(value);
+// console.log(value);
+
+
 
 //solution 5:
 interface Book {
@@ -62,3 +64,34 @@ const toggleReadStatus = (book: Book) => {
 const readBook = toggleReadStatus(myBook);
 // console.log(readBook);
 
+
+
+
+// solution 6:
+class Person{
+    name: string;
+    age: number;
+
+    constructor(_name: string, _age: number){
+        this.name = _name;
+        this.age = _age;
+    }
+}
+
+class Student extends Person{
+    grade: string;
+
+    constructor(_name: string, _age: number, _grade: string){
+        super(_name, _age);
+
+        this.grade = _grade;
+    }
+
+    getDetails(){
+        return (`"Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}";`);
+    }
+}
+
+
+const student = new Student("Alice", 20, "A");
+console.log(student.getDetails());
